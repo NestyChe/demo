@@ -1,0 +1,44 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">
+    <changeSet id="32" author="nesty">
+        <insert tableName="city">
+            <column name="id" value="1"/>
+            <column name="name" value="Moscow"/>
+            <column name="latitude" value="55.7522200"/>
+            <column name="longitude" value="37.6155600"/>
+        </insert>
+        <insert tableName="city">
+            <column name="id" value="2"/>
+            <column name="name" value="Samara"/>
+            <column name="latitude" value="53.2001"/>
+            <column name="longitude" value="50.150"/>
+        </insert>
+        <insert tableName="city">
+            <column name="id" value="3"/>
+            <column name="name" value="Washington "/>
+            <column name="latitude" value="39.0138049"/>
+            <column name="longitude" value="-77.5103113"/>
+        </insert>
+        <insert tableName="distance">
+            <column name="id" value="2"/>
+            <column name="from_city" value="Moscow"/>
+            <column name="to_city" value="Samara"/>
+            <column name="distance" value="1009"/>
+        </insert>
+        <insert tableName="distance">
+            <column name="id" value="3"/>
+            <column name="from_city" value="New-York"/>
+            <column name="to_city" value="Moscow"/>
+            <column name="distance" value="7890"/>
+        </insert>
+        <insert tableName="distance">
+            <column name="id" value="4"/>
+            <column name="from_city" value="Moscow"/>
+            <column name="to_city" value="Washington"/>
+            <column name="distance" value="8760"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

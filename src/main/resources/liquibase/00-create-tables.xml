@@ -1,0 +1,24 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">
+    <changeSet id="31" author="nesty">
+        <createTable tableName="city">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="city_key"/>
+            </column>
+            <column name="name" type="varchar(50)"/>
+            <column name="latitude" type="varchar(50)"/>
+            <column name="longitude" type="varchar(50)"/>
+        </createTable>
+        <createTable tableName="distance">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="distance_key"/>
+            </column>
+            <column name="from_city" type="varchar(50)"/>
+            <column name="to_city" type="varchar(50)"/>
+            <column name="distance" type="varchar(50)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
